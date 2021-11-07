@@ -40,7 +40,6 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew build
-        #-Pversion=${version} --stacktrace
 
       - name: Upload artififacts
         uses: actions/upload-artifact@v2.2.1
