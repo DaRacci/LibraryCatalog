@@ -29,6 +29,7 @@ catalog {
         alias("kotlinX-coroutinesCore").to("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
         alias("kotlinX-coroutinesJvm").to("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2-native-mt")
         // Libraries
+        alias("racciCore").to("me.racci:raccicore:0.2.0")
         alias("nbtInjector").to("de.tr7zw:data-injector:2.8.0")
         alias("dataNBTAPI").to("de.tr7zw:nbt-data-api:2.8.0")
         alias("itemNBTAPI").to("de.tr7zw:item-nbt-api:2.8.0")
@@ -73,4 +74,4 @@ publishing {
 }
 
 group = "me.racci"
-version = "1.0"
+version = "1.1"
