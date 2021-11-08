@@ -23,7 +23,7 @@ catalog {
         alias("plugin-vault").to("com.github.MilkBowl:VaultAPI:1.7")
         // Kotlin Libs
         alias("kotlin-stdLib").to("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0-RC2")
-        alias("kotlin-reflect").to("org.jetbrains.kotlin:kotlin-reflect:1.6.0-M1")
+        alias("kotlin-reflect").to("org.jetbrains.kotlin:kotlin-reflect:1.6.0-RC2")
         alias("kotlinX-datetime").to("org.jetbrains.kotlinx:kotlinx-datetime:0.3.1")
         alias("kotlinX-serialization").to("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
         alias("kotlinX-coroutinesCore").to("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
