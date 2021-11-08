@@ -78,7 +78,7 @@ publishing {
     publications {
         create<MavenPublication>("catalog") {
             from(components["versionCatalog"])
-//            artifactId = project.name.toLowerCase()
+            artifactId = project.name.toLowerCase()
         }
     }
 }

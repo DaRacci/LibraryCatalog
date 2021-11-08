@@ -45,7 +45,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.1
         with:
           name: LibraryCatalog
-          path: build/version-catalog/*.toml
+          path: build/libs/*.toml
 
       - name: Publish
         env:
