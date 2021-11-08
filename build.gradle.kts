@@ -64,16 +64,16 @@ tasks.generateCatalogAsToml {
 }
 
 publishing {
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/DaRacci/LibraryCatalog")
-            credentials {
-                username = "DaRacci"
-                password = System.getenv("TOKEN")
-            }
-        }
-    }
+//    repositories {
+//        maven {
+//            name = "GitHubPackages"
+//            url = uri("https://maven.pkg.github.com/DaRacci/LibraryCatalog")
+//            credentials {
+//                username = "DaRacci"
+//                password = System.getenv("TOKEN")
+//            }
+//        }
+//    }
 
     publications {
         create<MavenPublication>("catalog") {
