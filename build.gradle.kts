@@ -63,6 +63,10 @@ tasks.generateCatalogAsToml {
     }
 }
 
+artifacts {
+    archives(tasks.generateCatalogAsToml.get().outputFile.get())
+}
+
 publishing {
 //    repositories {
 //        maven {
