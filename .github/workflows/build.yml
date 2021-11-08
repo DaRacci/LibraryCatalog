@@ -39,7 +39,7 @@ jobs:
       - name: Build
         run: |
           chmod +x gradlew
-          ./gradlew build
+          ./gradlew clean generateCatalogAsToml
 
       - name: Upload artififacts
         uses: actions/upload-artifact@v2.2.1
