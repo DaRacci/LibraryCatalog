@@ -57,6 +57,11 @@ catalog {
 tasks.build {
     dependsOn(tasks.generateCatalogAsToml)
 }
+tasks.generateCatalogAsToml {
+    doLast {
+        outputFile.get().asFile.copyTo(File("build/libs/libs.versions.toml"))
+    }
+}
 
 publishing {
     repositories {
