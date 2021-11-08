@@ -28,8 +28,13 @@ catalog {
         alias("kotlinX-serialization").to("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
         alias("kotlinX-coroutinesCore").to("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2-native-mt")
         alias("kotlinX-coroutinesJvm").to("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.2-native-mt")
+        // Sylph
+        alias("sylphEvents").to("me.racci:SylphEvents:1.0.0")
+        alias("sylphBloodNights").to("me.racci:SylphBloodnights:1.0.0")
+        alias("sylph").to("me.racci:Sylph:0.0.6")
+        alias("sylphia").to("me.racci:Sylphia:0.0.6")
         // Libraries
-        alias("racciCore").to("me.racci:raccicore:0.2.0")
+        alias("racciCore").to("com.github.DaRacci:RacciCore:0.2.0")
         alias("nbtInjector").to("de.tr7zw:data-injector:2.8.0")
         alias("dataNBTAPI").to("de.tr7zw:nbt-data-api:2.8.0")
         alias("itemNBTAPI").to("de.tr7zw:item-nbt-api:2.8.0")
@@ -68,10 +73,10 @@ publishing {
     publications {
         create<MavenPublication>("catalog") {
             from(components["versionCatalog"])
-            artifactId = project.name.toLowerCase()
+//            artifactId = project.name.toLowerCase()
         }
     }
 }
 
 group = "me.racci"
-version = "1.1"
+version = "1.2"
