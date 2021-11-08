@@ -5,4 +5,4 @@ before_install:
   - sdk install java 16.0.1-open
   - sdk use java 16.0.1-open
 install:
-  - ./gradlew clean generateCatalogAsToml install
+  - ./gradlew clean generateCatalogAsToml publish
