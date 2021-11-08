@@ -57,27 +57,27 @@ catalog {
 tasks.build {
     dependsOn(tasks.generateCatalogAsToml)
 }
-tasks.generateCatalogAsToml {
-    doLast {
-        outputFile.get().asFile.copyTo(File("build/libs/libs.versions.toml"))
-    }
-}
+//tasks.generateCatalogAsToml {
+//    doLast {
+//        outputFile.get().asFile.copyTo(File("build/libs/libs.versions.toml"))
+//    }
+//}
 
 artifacts {
     archives(tasks.generateCatalogAsToml.get().outputFile.get())
 }
 
 publishing {
-//    repositories {
-//        maven {
-//            name = "GitHubPackages"
-//            url = uri("https://maven.pkg.github.com/DaRacci/LibraryCatalog")
-//            credentials {
-//                username = "DaRacci"
-//                password = System.getenv("TOKEN")
-//            }
-//        }
-//    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/DaRacci/LibraryCatalog")
+            credentials {
+                username = "DaRacci"
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
 
     publications {
         create<MavenPublication>("catalog") {
@@ -88,4 +88,4 @@ publishing {
 }
 
 group = "me.racci"
-version = "1.2"
+version = "1.3"
