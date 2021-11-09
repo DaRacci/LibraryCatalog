@@ -56,10 +56,10 @@ catalog {
 
 tasks.build {
     dependsOn(tasks.generateCatalogAsToml)
-}
-
-artifacts {
-    archives(tasks.generateCatalogAsToml)
+    doLast {
+        tasks.generateCatalogAsToml.get().outputFile.get().asFile
+            .copyTo(File(System.getenv("DEPLOY_DIR")))
+    }
 }
 
 publishing {
