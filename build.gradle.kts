@@ -57,14 +57,9 @@ catalog {
 tasks.build {
     dependsOn(tasks.generateCatalogAsToml)
 }
-//tasks.generateCatalogAsToml {
-//    doLast {
-//        outputFile.get().asFile.copyTo(File("build/libs/libs.versions.toml"))
-//    }
-//}
 
 artifacts {
-    archives(tasks.generateCatalogAsToml.get().outputFile.get())
+    archives(tasks.generateCatalogAsToml)
 }
 
 publishing {
@@ -73,19 +68,19 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/DaRacci/LibraryCatalog")
             credentials {
-                username = "DaRacci"
-                password = System.getenv("TOKEN")
+                username = System.getenv("USERNAME") ?: findProperty("USERNAME") as String
+                password = System.getenv("TOKEN")    ?: findProperty("TOKEN") as String
             }
         }
     }
 
     publications {
         create<MavenPublication>("catalog") {
-            from(components["versionCatalog"])
+            artifact(tasks.generateCatalogAsToml)
             artifactId = project.name.toLowerCase()
         }
     }
 }
 
 group = "me.racci"
-version = "1.3"
+version = "1.4"
