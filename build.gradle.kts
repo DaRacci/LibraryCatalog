@@ -68,8 +68,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/DaRacci/LibraryCatalog")
             credentials {
-                username = System.getenv("USERNAME") ?: findProperty("USERNAME") as String
-                password = System.getenv("TOKEN")    ?: findProperty("TOKEN") as String
+                username = System.getenv("USERNAME") ?: findProperty("USERNAME").toString()
+                password = System.getenv("TOKEN")    ?: findProperty("TOKEN").toString()
             }
         }
     }
