@@ -77,7 +77,7 @@ publishing {
     publications {
         create<MavenPublication>("catalog") {
             artifact(tasks.generateCatalogAsToml)
-            //artifactId = project.name.toLowerCase()
+            artifactId = project.name.toLowerCase()
         }
     }
 }
